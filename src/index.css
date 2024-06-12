@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.mySwiper {
+    width: 100%;
+    height: 80vh;
+  }
+  
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+  
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+
+.arriba {
+    opacity: 0;
+    animation: slideUp 1s ease forwards;
+}
+
+.derecha{
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+.derecha2{
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: .3s;
+}
+.derecha3{
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: .6s;
+}
+
+.push {
+    animation: slidePush 1s ease forwards;
+    opacity: 0;
+}
+.push2{
+    animation: slidePush 1s ease forwards;
+    animation-delay: .3s;
+    opacity: 0;
+}
+.push3{
+    animation: slidePush 1s ease forwards;
+    animation-delay: .6s;
+    opacity: 0;
+}
+.pushimage{
+    animation: slidePush 1.5s ease-in-out forwards;
+    opacity: 0;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(200px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes slideRight {
+    from {
+        opacity: 0;
+        transform: translateX(200px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slidePush {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
